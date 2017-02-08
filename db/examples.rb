@@ -17,3 +17,42 @@
 #                password: 'abc123',
 #                password_confirmation: nil)
 # end
+
+Doctor.transaction do
+  %w(alice bob charlie dana eliot franky gloria henry iulia).each do |name|
+    doctor_params = {
+      given_name: name,
+      family_name: 'McDreamy'
+    }
+    next if Doctor.exists? doctor_params
+    Doctor.create! doctor_params
+  end
+end
+
+Patient.transaction do
+  %w(alice bob charlie dana eliot franky gloria henry iulia).each do |name|
+    full_name = "#{name} McFace"
+    next if Patient.exists? name: full_name
+    Patient.create!(name: full_name,
+                    diagnosis: 'Addicted to Love',
+                    born_on: '1986-01-01',
+                    doctor: Doctor.all.sample)
+  end
+end
+
+Appointment.transaction do
+  require 'date'
+  date_time = DateTime.now
+
+  20.times do
+    appointment_params = {
+      patient: Patient.all.sample,
+      doctor: Doctor.all.sample,
+      start_at: date_time,
+      length: 60
+    }
+
+    next if Appointment.exists? appointment_params
+    Appointment.create!(appointment_params)
+  end
+end
