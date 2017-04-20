@@ -17,36 +17,36 @@
 #                password_confirmation: nil)
 # end
 
-Patient.create([
-                 { name: 'Jeff Horn',
-                   sickness: 'Too cool for school' },
-                 { name: 'Chris Payne',
-                   sickness: 'Way to excited' },
-                 { name: 'Brian Berzellini',
-                   sickness: 'Spooky Ghost' },
-                 { name: 'Antony Donovan',
-                   sickness: 'Robot Syndrome' },
-                 { name: 'Jason Weeks',
-                   sickness: 'Oddly large chest' }
-               ])
+# Patient.create([
+#                  { name: 'Jeff Horn',
+#                    diagnosis: 'Too cool for school' },
+#                  { name: 'Chris Payne',
+#                    diagnosis: 'Way to excited' },
+#                  { name: 'Brian Berzellini',
+#                    diagnosis: 'Spooky Ghost' },
+#                  { name: 'Antony Donovan',
+#                    diagnosis: 'Robot Syndrome' },
+#                  { name: 'Jason Weeks',
+#                    diagnosis: 'Oddly large chest' }
+#                ])
 
-# Doctor.create([
-#                 { given_name: 'Ben',
-#                   surname: 'Adamski',
-#                   specialty: 'VapeKing' },
-#                 { given_name: 'Rachel',
-#                   surname: 'Stevens',
-#                   specialty: 'Horse Enthusiast' },
-#                 { given_name: 'Julie',
-#                   surname: 'Carroll',
-#                   specialty: 'Getting everyone jobs' },
-#                 { given_name: 'Lu',
-#                   surname: 'Nathan',
-#                   specialty: 'iPhone guru' },
-#                 { given_name: 'Naida',
-#                   surname: 'the Pollster',
-#                   specialty: 'Keeping us all caffinated' }
-#               ])
+Doctor.create([
+                { given_name: 'Ben',
+                  family_name: 'Adamski',
+                  specialty: 'VapeKing' },
+                { given_name: 'Rachel',
+                  family_name: 'Stevens',
+                  specialty: 'Horse Enthusiast' },
+                { given_name: 'Julie',
+                  family_name: 'Carroll',
+                  specialty: 'Getting everyone jobs' },
+                { given_name: 'Lu',
+                  family_name: 'Nathan',
+                  specialty: 'iPhone guru' },
+                { given_name: 'Naida',
+                  family_name: 'the Pollster',
+                  specialty: 'Keeping us all caffinated' }
+              ])
 #
 # Patient.create([
 #                  { name: 'Jeff Horn',
