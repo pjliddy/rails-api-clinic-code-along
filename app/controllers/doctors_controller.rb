@@ -27,7 +27,7 @@ class DoctorsController < ApplicationController
   # PATCH/PUT /doctors/1
   def update
     if @doctor.update(doctor_params)
-      render json: @doctor
+      head :no_content
     else
       render json: @doctor.errors, status: :unprocessable_entity
     end
